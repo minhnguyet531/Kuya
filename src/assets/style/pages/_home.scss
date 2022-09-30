@@ -1,0 +1,16 @@
+.section__slider {
+    position: relative;
+}
+
+.section__listOfCharacters {
+    padding: 5rem 0;
+    @include displayFlex(row, center, center);
+
+    .list_cards {
+        padding: 7rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5rem;
+        justify-items: center;
+    }
+}

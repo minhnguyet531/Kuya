@@ -1,0 +1,50 @@
+.footer {
+    height: 100vh;
+    @include displayFlex(column, center, center, 4rem);
+    background-image: url("../../image/footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .game-download {
+        width: 16rem;
+        height: 16rem;
+        border-radius: 1.6rem;
+        box-shadow: rgba($color-black, 0.24) 0px 3px 8px;
+        -webkit-border-radius: 1.6rem;
+        -moz-border-radius: 1.6rem;
+        -ms-border-radius: 1.6rem;
+        -o-border-radius: 1.6rem;
+    }
+
+    .title {
+        text-align: center;
+        h1 {
+            text-transform: uppercase;
+            color: $color-gray-light;
+            font-weight: 700;
+            font-size: 3.2rem;
+        }
+
+        h4 {
+            padding-top: 1rem;
+            font-size: 2rem;
+            color: $color-gray-light-1;
+        }
+    }
+}
+
+.downloads {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.8rem;
+    .download-game {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 1.2rem 2rem;
+
+        .icon-down {
+            font-size: 3.6rem;
+        }
+    }
+}

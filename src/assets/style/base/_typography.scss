@@ -1,0 +1,31 @@
+.title_header {
+    // font-size: 3.2rem;
+    color: $color-gray;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.title_main {
+    font-size: 3.2rem;
+}
+
+.text-tonePink,
+.text-toneYellow {
+    color: $color-red;
+}
+
+.text-toneGreen {
+    color: $color-green;
+}
+
+.text-toneWhite {
+    color: $color-gray;
+}
+
+.text-toneYellowBrown {
+    color: $color-yellowBrown;
+}
+
+.text__align--start {
+    text-align: start;
+}

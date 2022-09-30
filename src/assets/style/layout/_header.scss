@@ -1,0 +1,29 @@
+.header {
+    @include displayFlex(row, center, center);
+    position: relative;
+    width: 100vw;
+    height: 9rem;
+    background-color: $color-secondary;
+    box-shadow: rgba($color-tertiary, 0.5) 0px 10px 20px;
+    z-index: 9999;
+    // padding: 0 16rem;
+    &_logo--game {
+        height: 6rem;
+    }
+
+    &_nav {
+        @include displayFlex(row, space-between, center, 4rem);
+
+        &--item {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color-gray;
+            font-weight: 700;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+// Chứa khai báo những hàm dùng chung trong cả project
+@mixin displayFlex($flex-direction, $justify-content, $align-items, $gap: 0) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}
+
+@mixin hover {
+    &:hover {
+        transform: translateY(-0.2rem);
+        -webkit-transform: translateY(-0.2rem);
+        -moz-transform: translateY(-0.2rem);
+        -ms-transform: translateY(-0.2rem);
+        -o-transform: translateY(-0.2rem);
+        box-shadow: 0 1rem 1rem rgba($color-gray, 0.2);
+        &::after {
+            transform: scaleX(1.2) scaleY(1.2);
+            -webkit-transform: scaleX(1.2) scaleY(1.2);
+            -moz-transform: scaleX(1.2) scaleY(1.2);
+            -ms-transform: scaleX(1.2) scaleY(1.2);
+            -o-transform: scaleX(1.2) scaleY(1.2);
+            opacity: 0;
+        }
+    }
+}
+
+@mixin color-btn($color, $backgroundColor) {
+    color: $color;
+    background-color: $backgroundColor;
+}
+
+@mixin align-element($top, $left, $X, $Y) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    transform: translate($X, $Y);
+    -webkit-transform: translate($X, $Y);
+    -moz-transform: translate($X, $Y);
+    -ms-transform: translate($X, $Y);
+    -o-transform: translate($X, $Y);
+}
+
+@mixin linear-gradientBG($color1, $color2) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color1, 0.85),
+        rgba($color2, 0.85)
+    );
+}
+
+@mixin circle($width, $height) {
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}

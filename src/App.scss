@@ -1,0 +1,19 @@
+@import "../src/assets/style/abstracts/variables";
+@import "../src/assets/style/abstracts/mixins";
+
+@import "../src/assets/style/base/base";
+@import "../src/assets/style/base/typography";
+@import "../src/assets/style/base/utilities";
+
+@import "../src/assets/style/components/search";
+@import "../src/assets/style/components/button";
+@import "../src/assets/style/components/slider";
+@import "../src/assets/style/components/card";
+@import "../src/assets/style/components/tags";
+@import "../src/assets/style/components/menu";
+@import "../src/assets/style/components/tippy";
+
+@import "../src/assets/style/layout/header";
+@import "../src/assets/style/layout/footer";
+
+@import "../src/assets/style/pages/home";

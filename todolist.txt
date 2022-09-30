@@ -1,0 +1,17 @@
+1. Chức năng:
+ - Login/ logout
+ - Chatting
+ - Search charater
+ - Wishlist
+
+2. News
+- Na ná trang https://www.leagueoflegends.com/en-us/news/
+
+3. Champions
+ - Na ná trang https://www.leagueoflegends.com/en-us/champions/ahri/
+
+4. Patch notes
+ - Na ná trang https://www.leagueoflegends.com/en-us/news/game-updates/patch-12-14-notes/
+
+5. Contact
+ - Form

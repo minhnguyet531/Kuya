@@ -1,0 +1,47 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+.btn {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 1.2rem;
+    -webkit-border-radius: 1.2rem;
+    -moz-border-radius: 1.2rem;
+    -ms-border-radius: 1.2rem;
+    -o-border-radius: 1.2rem;
+    &-login {
+        font-size: 2rem;
+        @include color-btn($color-secondary, $toneGreen);
+        @include hover;
+    }
+
+    &-add {
+        @include hover;
+
+        font-size: 1.6rem;
+        &--toneYellow {
+            @include color-btn($color-red, $toneYellow);
+        }
+
+        &--tonePink {
+            @include color-btn($color-secondary, $tonePink);
+        }
+
+        &--toneGreen {
+            @include color-btn($color-secondary, $toneGreen);
+        }
+
+        &--toneWhite {
+            @include color-btn($color-secondary, $color-yellowBrown);
+        }
+    }
+
+    &-down {
+        @include hover;
+        @include color-btn($color-secondary, $color-black);
+    }
+}
+
+.bg-white {
+    background-color: $color-secondary;
+}

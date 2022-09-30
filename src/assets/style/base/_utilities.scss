@@ -1,0 +1,71 @@
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+a {
+    color: $color-gray;
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: 80%;
+    height: 100%;
+
+    &__horizontal {
+        @include displayFlex(row, space-between, center);
+    }
+
+    &__vertical {
+        @include displayFlex(column, center, space-between);
+    }
+}
+
+.display_flex--horizontal {
+    @include displayFlex(row, space-between, center);
+}
+
+.flex__horizontal-includeIcon {
+    @include displayFlex(row, flex-start, center, 1.8rem);
+}
+
+.display_flex--vertical {
+    @include displayFlex(column, space-between, center);
+}
+
+// Icon
+.icon {
+    cursor: pointer;
+    padding: 0 1.2rem;
+
+    &_left {
+        @include displayFlex(row, flex-start, center, 2rem);
+    }
+
+    &_right {
+        @include displayFlex(row, space-between, center, 2rem);
+    }
+
+    &-wish {
+        @include displayFlex(column, center, center);
+
+        font-size: 2rem;
+        color: $color-red-left;
+        // @include color-btn($color-secondary, $color-red-left);
+    }
+}
+
+.avatar {
+    cursor: pointer;
+    @include circle(5rem, 5rem);
+}
+
+.separate {
+    border-top: 1.2px solid rgba($color-gray-light, 0.12);
+}

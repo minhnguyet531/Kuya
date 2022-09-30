@@ -1,0 +1,38 @@
+@import "../abstracts/variables";
+.nav_sub {
+    display: flex;
+    flex-direction: column;
+    width: 23rem;
+    padding: 1.6rem 0;
+    font-weight: 500;
+    background-color: $color-secondary;
+    box-shadow: rgba($color-black, 0.12) 0px 8px 24px;
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+
+    &--item {
+        cursor: pointer;
+        width: 100%;
+        padding: 0.8rem 2rem;
+        font-size: 1.6rem;
+        text-align: start;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        &:hover {
+            color: $color-secondary;
+            background-color: rgba($toneGreen, 0.68);
+        }
+    }
+}
+
+.header_subnav {
+    font-size: 1.8rem;
+    padding: 1rem 1.6rem;
+    background-color: $color-secondary;
+}

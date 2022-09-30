@@ -1,0 +1,36 @@
+.tags {
+    .tag {
+        &-item {
+            font-size: 1.8rem;
+            list-style: none;
+            font-weight: 700;
+            margin-left: 1.8rem;
+            padding: 0.2rem 1rem;
+            box-shadow: rgba($color-black, 0.24) 0px 3px 8px;
+            border-radius: 9rem;
+            -webkit-border-radius: 9rem;
+            -moz-border-radius: 9rem;
+            -ms-border-radius: 9rem;
+            -o-border-radius: 9rem;
+
+            &:hover {
+                @include hover;
+            }
+        }
+
+        &_active--green {
+            background-color: $toneGreen;
+            color: $color-secondary;
+        }
+
+        &_active--pink {
+            background-color: $tonePink;
+            color: $color-secondary;
+        }
+
+        &_active--yellow {
+            background-color: $toneYellow;
+            color: $color-secondary;
+        }
+    }
+}
