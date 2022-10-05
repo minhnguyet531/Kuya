@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaSearch, FaAngleDown, FaRegKissWinkHeart } from "react-icons/fa";
 import Image from "./Image";
@@ -10,9 +10,11 @@ import ResultCharacterSearch from "./ResultCharacterSearch";
 import Button from "./Button";
 import Menu from "./Poppers/Menu";
 import { navMenuNews, navMenuUtility } from "../common/data";
+import { listCharacters } from "../common/data";
 
 function Header() {
-    const [search, setSearch] = useState([]);
+    const [search, setSearch] = useState("");
+    const [listCharactersSearch, setListCharactersSearch] = useState([]);
 
     // useEffect(() => {
     //     setTimeout(() => {
@@ -22,6 +24,14 @@ function Header() {
 
     // const checkLogin = false;
     const checkLogin = true;
+
+    const handleSearchCharacter = (valueSearch) => {
+        const filteredCharacters = listCharacters.filter((item) => {
+            return item.name.toLowerCase().includes(valueSearch.toLowerCase());
+        });
+        setListCharactersSearch(() => filteredCharacters);
+    };
+
     return (
         <header className="header">
             <div className="content content__horizontal">
@@ -63,13 +73,22 @@ function Header() {
                             tabIndex="-1"
                             {...attrs}
                         >
-                            <ResultCharacterSearch />
+                            <ResultCharacterSearch
+                                ListCharactersSearch={listCharactersSearch}
+                            />
                         </div>
                     )}
                 >
                     <div className="box_search">
                         <FaSearch className="search" />
-                        <input type="text" placeholder="Search character..." />
+                        <input
+                            type="text"
+                            placeholder="Search character..."
+                            onChange={(e) => {
+                                setSearch(() => e.target.value);
+                                handleSearchCharacter(e.target.value);
+                            }}
+                        />
                     </div>
                 </TippyHeadless>
                 {checkLogin ? (
@@ -85,7 +104,7 @@ function Header() {
                         </Tippy>
                         <Menu items={navMenuUtility}>
                             <Image
-                                src="https://f9.photo.talk.zdn.vn/4776061321307579352/fcbd2bd24d068f58d617.jpg"
+                                src={require("../assets/image/characters/Onion.jpg")}
                                 alt=""
                                 className="avatar"
                             />

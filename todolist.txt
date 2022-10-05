@@ -1,7 +1,7 @@
 1. Chức năng:
  - Login/ logout
  - Chatting
- - Search charater
+ - Search charater -> done 
  - Wishlist
 
 2. News

@@ -12,6 +12,7 @@ function Slider() {
             setIndexSlide(indexSlide === len ? 0 : indexSlide + 1);
         }, 5000);
         return () => clearInterval(interval);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [indexSlide]);
     return (
         <section className="section__slider">

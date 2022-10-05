@@ -40,6 +40,9 @@
 }
 
 .search-items {
+    max-height: 42rem;
+    overflow: scroll; /* Scrollbar are always visible */
+    overflow: auto; /* Scrollbar is displayed as it's needed */
     padding: 1.2rem 0;
     h2 {
         padding-left: 2.4rem;
